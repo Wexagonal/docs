@@ -20,7 +20,18 @@ module.exports = {
         docsDir: 'docs',
         lastUpdated: '上次更新',
         logo: 'https://npm.elemecdn.com/wexagonal_icon',
-        sidebar: 'auto',
+        sidebar: [
+            ['/start', '安装'],
+            ['/db', '数据库'],
+            {
+                title: '部署',   // 必要的
+                path: '/deploy/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                children: [
+                  '/deploy/vercel'
+                ]
+              },
+            ['/config/db.md', '数据库接入']
+        ],
         nav: [
             { text: '开始', link: '/start' },
             {
